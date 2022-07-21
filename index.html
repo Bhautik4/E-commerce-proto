@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./Cart.js"></script>
+
+</head>
+
+<body style="text-align: center;">
+
+    <form action="">
+
+        <h2><center>Welcome to Stationery Store </center></h2>
+
+        <!-- Cart -->
+        <h2>Add Cart Details</h2>
+        <select id="Item">
+            <option value="Pen">Pen</option>
+            <option value="Pencil">Pencil</option>
+            <option value="CompassBox">CompassBox</option>
+            <option value="Stapler">Stapler</option>
+            <option value="Paper">Paper</option>
+            <option value="Toys">Toys</option>
+            <option value="LunchBox">LunchBox</option>
+            <option value="NoteBook">NoteBook</option>
+            <option value="TextBook">TextBook</option>
+            <option value="FileFolder">FileFolder </option>
+        </select>
+        <input type="number" id="Quantity" min="1" max="10" placeholder="Qty"> </p>
+        <input type="button" id="SaveButton" value="Add Cart" onclick="add()"> </p>
+        <textarea id="CartDisplay" cols="30" rows="10" readonly="readonly"></textarea>
+
+        <hr>
+
+        <!-- Form -->
+        <h2>Form Details</h2>
+        <input type="text" id="FirstName" placeholder="First Name" size="40"> </p>
+        <input type="text" id="LastName" placeholder="Last Name" size="40"> </p>
+        <input type="text" id="Email" placeholder="E-Mail" size="40"> </p>
+        <input type="text" id="Mobile" placeholder="Mobile No." size="40"> </p>
+        <input type="text" id="Address" placeholder="Address" size="40"> </p>
+        <input type="button" id="FormButton" value="Place Order" onclick="formDisplay()"> </p>
+        <textarea id="DisplayForm" cols="30" rows="10" readonly="readonly"></textarea>
+
+
+        <hr>
+
+        <!-- Summery -->
+
+        <h2>Summery Details</h2>
+        <strong>Enter Order Number:</strong> <br>
+        <input type="text" id="SubScript" value="0" size="20">
+        <input type="button" value="Go To" onclick="LoadForm(document.getElementById('SubScript').value)"> </p>
+
+        <input type="button" value="First" onclick="LoadForm(0)">
+        <input type="button" value="Previous" onclick="LoadForm(-2)">
+        <input type="button" value="Next" onclick="LoadForm(-1)">
+        <input type="button" value="Last" onclick="LoadForm(-3)"> <br> <br>
+        <textarea id="OrderSummery" cols="30" rows="10" readonly="readonly"></textarea>
+    </form>
+
+</body>
+
+</html>
